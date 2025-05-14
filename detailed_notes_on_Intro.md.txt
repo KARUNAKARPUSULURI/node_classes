@@ -1,0 +1,157 @@
+Detailed Notes on Intro.md - Node.js Introduction
+
+1. Overview of Node.js:
+   - Node.js is a runtime environment that allows running JavaScript code outside the browser.
+   - It is primarily used to build server-side applications.
+   - Node.js is lightweight and scalable, making it suitable for microservices architecture.
+
+2. Key Characteristics of Node.js:
+   - Non-blocking I/O: Node.js uses asynchronous, event-driven input/output operations, which means it does not block the execution while waiting for I/O operations to complete.
+   - Built with V8 and C++: The core of Node.js is built on Google's V8 JavaScript engine and C++ for performance.
+   - Single-threaded: Node.js operates on a single main thread that receives requests and delegates work to worker threads or the thread pool.
+
+3. Data Handling in Node.js:
+   - Data is received in chunks or pieces rather than as a whole.
+   - Example JSON data:
+     {
+       "name": "karunakar",
+       "age": 30,
+       "email": "karunakar@gmail.com"
+     }
+   - This data can arrive in fragmented chunks, e.g.:
+     {"name :
+     "karuna
+     kar","ag
+     e" : 30
+     ,"emai
+     l" : "karun
+     akar@gm
+     ail.com"}
+   - Node.js handles these chunks using streams and event emitters.
+
+4. Event Emitters and Streams:
+   - Event emitters allow Node.js to listen for and respond to events.
+   - Example of handling data chunks in a request:
+     req.on("data", (chunk) => {
+       bodyData += chunk;
+     });
+   - This pattern allows processing data as it arrives, improving efficiency.
+
+5. Middleware Concept:
+   - Middleware acts as a middle layer in the request-response cycle.
+   - It has access to both the request (req) and response (res) objects.
+   - Middleware can modify requests, responses, or perform other operations before passing control to the next middleware or route handler.
+
+6. Event-Driven Non-Blocking I/O Model:
+   - Node.js uses an event-driven architecture to handle I/O operations without blocking the main thread.
+   - Components involved:
+     - Main thread: Executes JavaScript code.
+     - libUV: A C library that handles asynchronous I/O operations.
+     - Thread pool: A pool of threads used for executing blocking tasks.
+     - Kernel I/O: The operating system's I/O operations.
+     - Event queue: Holds events to be processed by the event loop.
+
+7. Event Loop:
+   - The event loop is the mechanism that processes events and executes callback functions.
+   - It handles:
+     - Top-level code execution.
+     - Expired timers.
+     - Other phases of the event loop cycle (not detailed in the intro).
+
+Summary:
+Node.js is a powerful runtime environment designed for building scalable server-side applications using an event-driven, non-blocking I/O model. It efficiently handles data streams and asynchronous events, making it ideal for microservices and real-time applications.
+
+
+
+Modules :- 
+
+Its a block of reuseable code -> 
+CJS -> Common Javascript -> node js -> exports, require(path: string)
+ESM -> ECMA Script modules -> js -> named modules, default modules -> import and export
+types :- 
+1. core | local | inbuilt modules  (OS, PATH, FS, HTTP, URL)
+2. User defined modules (USER DEFINED)
+3. Third party modules (BCRYPT, JWT, EXPRESS, MONGOOSE, CORS, DOTENV, MULTER)
+
+user defined modules -> 
+
+---------------------------------------------------
+Path module :- 
+The node:path module provides utilities for working with file and directory paths. 
+It can be accessed using: node:path
+
+
+
+local paths :- image preview -> screenshot(123).png
+                              -> C://fakepath/screenshots/screenshot(123).png
+
+pdf -> local machine -> client side button -> json- server -> C://fakepath/documents/resume.pdf
+
+http://www.example.com/uploads
+{
+  "uploads" : [
+    {
+      "id" : "1231",
+      "resume" : "https://www.example.com/uploads/resume.pdf"
+    }
+  ]
+}
+
+https://avika-admin-panel.web.app/PatientDetails/34
+
+https://med-records-prod.s3.ap-south-1.amazonaws.com/medical_documents/1704691096432-File%20No%20%205426_2014%204160_2009_20240103_0001.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAUPZZOPYZKKPJ445Z%2F20250507%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20250507T085258Z&X-Amz-Expires=900&X-Amz-Signature=a23b769388f420a5409a87d52a50d545b0b7def5c5139903f50146f7b6114484&X-Amz-SignedHeaders=host&x-id=GetObject
+
+
+aaaabbcc
+a3b2c2
+karunakar_resume/1704691096432
+
+
+
+uploads.map((ele, index)=> <img value = {ele.resume} />)
+
+
+https://www.example.com/uploads/img.png
+
+
+href = "path"
+src = "path"
+
+
+{
+  readFile: [Function: readFile],
+  writeFile: [Function: writeFile],
+  appendFile: [Function: appendFile],
+}
+karunakar.js -> Hi this is karunkar, my age is 30
+
+
+---------------------------------
+TASK -> 
+INTERGRATION -> 
+FRONTEND{REACT}, BACKEND{server.js, db.json} -> /posts
+--------------------------------------------------------------------------
+db.json -> [{},{}]
+const http = require("http")
+
+const server = http.createServer((req, res)=>{
+  if(req.url == "/users"){
+    fs.readFile("./db.json", "UTF-8", (err,data)=>{
+      if(err) throw new Error("db file error")
+      else res.end(data)
+    })
+  }s
+})
+
+server.listen(3000, ()=>{
+  console.log("server is running..")
+})
+---------------------------------------------------------------------------
+ - need to import http module
+ - need to create a server  
+ - need to listen to requests
+ - to access json file, use path module and fs module
+
+ -> Once the api is built or server is ready, then start integarting in the react -> cards, table
+
+ CRUD OPERATION

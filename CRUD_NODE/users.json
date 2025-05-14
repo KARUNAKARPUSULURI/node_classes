@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "full_name": "karunakar pusuluri",
+        "first_name": "karunakar",
+        "last_name": "pusuluri"
+    },
+    {
+        "id": "2",
+        "full_name": "saiteja m",
+        "hello": "hem",
+        "last_name": "m"
+    },
+    {
+        "id": 3,
+        "full_name": "chaitanya m",
+        "hello": "chai",
+        "last_name": "m"
+    }
+]
