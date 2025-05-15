@@ -155,3 +155,35 @@ server.listen(3000, ()=>{
  -> Once the api is built or server is ready, then start integarting in the react -> cards, table
 
  CRUD OPERATION
+
+ const obj = {
+    "train_name" : "Charminar express",
+    "train_number" : 14325,
+    "start_station" : "secunderabad",
+    "end_station" : "Tambaram",
+    "start_time" : "6:30 PM",
+    "expected_end_time" : "8:00 AM",
+    "total_days" : 1,
+    "stations" : [
+        {
+            "station_id" : 1111,
+            "station_name" : "Warangal",
+            "arrival_time" : "8:30 PM",
+            "depature_time" : "8:35 PM",
+        },
+        {
+            "station_id" : 1121,
+            "station_name" : "Vijayawada",
+            "arrival_time" : "12:30 AM",
+            "depature_time" : "12:50 AM",
+        },
+        {
+            "station_id" : 1125,
+            "station_name" : "Ongole",
+            "arrival_time" : "3:30 AM",
+            "depature_time" : "3:32 AM",
+        }
+    ],
+    "is_running_late" : false,
+    "is_train_running" : true
+}

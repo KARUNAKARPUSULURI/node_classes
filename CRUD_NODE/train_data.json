@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "train_name": "Kakatiya express",
+        "train_number": 12345,
+        "train_code" : "SEC-BDCR",
+        "start_station": "secunderabad",
+        "end_station": "badhrachalem",
+        "start_time": "5:30 PM",
+        "expected_end_time": "8:00 PM",
+        "total_days": 2,
+        "stations": [
+            {
+                "station_id": 1012,
+                "station_code" : "kzj",
+                "station_name": "khajipet",
+                "arrival_time": "6:30 PM",
+                "depature_time": "6:35 PM"
+            }
+        ],
+        "is_running_late": true,
+        "is_train_running": true
+    },
+    {
+        "id": 2,
+        "train_name": "Charminar express",
+        "train_number": 14325,
+        "train_code" : "SEC-TMBR",
+        "start_station": "secunderabad",
+        "end_station": "Tambaram",
+        "start_time": "6:30 PM",
+        "expected_end_time": "8:00 AM",
+        "total_days": 1,
+        "stations": [
+            {
+                "station_id": 1111,
+                "station_code" : "WGL",
+                "station_name": "Warangal",
+                "arrival_time": "8:30 PM",
+                "depature_time": "8:35 PM"
+            },
+            {
+                "station_id": 1121,
+                "station_code" : "BZA",
+                "station_name": "Vijayawada",
+                "arrival_time": "12:30 AM",
+                "depature_time": "12:50 AM"
+            },
+            {
+                "station_id": 1125,
+                "station_code" : "OGL",
+                "station_name": "Ongole",
+                "arrival_time": "3:30 AM",
+                "depature_time": "3:32 AM"
+            }
+        ],
+        "is_running_late": false,
+        "is_train_running": true
+    }
+]
