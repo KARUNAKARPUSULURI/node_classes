@@ -187,3 +187,20 @@ server.listen(3000, ()=>{
     "is_running_late" : false,
     "is_train_running" : true
 }
+
+express js :- 
+it is a framework which is used to build server side applications
+using this you need not to do things manually how you doing in node js like here in express we have middlewares which are in built to use using use()
+conversions, req.body
+1.middlewares
+2.data conversions -> plain obj -> string object -> 
+3.not Time consuming
+4.no more req.url -> just .get, .post, 
+5. routings -> "/:id" X -> dynamic -> "/:id"
+
+res.send() => text, json etc.,
+res.json()
+---------------\
+/users -> userlist
+/register -> 
+/login ->  
