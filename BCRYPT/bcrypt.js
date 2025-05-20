@@ -1,4 +1,5 @@
 const express = require("express");
+const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 const path = require("path");
@@ -7,13 +8,15 @@ const app = express();
 app.use(express.json());
 const dataPath = path.resolve("BCRYPT", "data.json")
 const saltRounds = 10;
+const secret_key = "karuna123"
 
 app.post("/", async (req, res) => {
     const { username, password } = req.body
     const hashedPassword = await bcrypt.hash(password, saltRounds)
     const data = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
     const id = data.length + 1
-    data.push({ id, username, password: hashedPassword })
+    const token = jwt.sign(hashedPassword, secret_key)
+    data.push({ id, username, password: hashedPassword, token })
     fs.writeFileSync(dataPath, JSON.stringify(data))
     res.json(data)
 })

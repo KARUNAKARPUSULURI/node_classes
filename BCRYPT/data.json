@@ -1,12 +1,1 @@
-[
-    {
-        "id": 1,
-        "username": "karunakar",
-        "password": "123456"
-    },
-    {
-        "id": 2,
-        "username": "Harish",
-        "password": "$2b$10$dmJGNFDJmQUxivOAM5NZYu0DlgFoVs/zSG0xI3YWoZpUb.gqzoFYS"
-    }
-]
+[{"id":1,"username":"sai teja","password":"$2b$10$nSM4s6EypshlIIEEIXApw..w6VJe9h6QWiuP8fRez1e/NifWtDyjO","token":"eyJhbGciOiJIUzI1NiJ9.JDJiJDEwJG5TTTRzNkV5cHNobElJRUVJWEFwdy4udzZWSmU5aDZRV2l1UDhmUmV6MWUvTmlmV3REeWpP.lJTgiyVmtGZDM8mz-sQIABBrBO7KyAt0Yx96SF07mow"},{"id":2,"username":"karunakar","password":"$2b$10$.Bc5sWmNEdx5d2Yatpluau7WuOmS8P4cpsh/aq8wTmQPU/LsMPnW6","token":"eyJhbGciOiJIUzI1NiJ9.JDJiJDEwJC5CYzVzV21ORWR4NWQyWWF0cGx1YXU3V3VPbVM4UDRjcHNoL2FxOHdUbVFQVS9Mc01Qblc2.ry96aHUrDoYidZ594ZM_BjRw07770aOWlzt54PvkSsA"}]
