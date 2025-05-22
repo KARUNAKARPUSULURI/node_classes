@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Todo from './Components/Todo';
 import Table from './Components/Table';
-
+import Summarize from './Components/Summarize';
 
 function App() {
   const [editTodo, setEditTodo] = useState(null);
@@ -24,6 +24,8 @@ function App() {
         refreshTodos={refreshTodos} 
         setRefreshTodos={setRefreshTodos} 
       />
+      
+      <Summarize />
     </div>
   );
 }

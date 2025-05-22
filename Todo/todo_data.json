@@ -1,1 +1,1 @@
-[]
+[{"id":1,"title":"Buy groceries","description":"Milk, Bread, Eggs","status":"pending"},{"id":2,"title":"Complete project","description":"Finish the Node.js API project","status":"in_progress"},{"id":3,"title":"Read book","description":"Read Clean Code chapters 1-3","status":"completed"}]
