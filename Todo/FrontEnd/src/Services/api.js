@@ -1,17 +1,19 @@
 import { getTodosUrl } from "./constants"
 
-export const getTodosData = async() => {
+export const getTodosData = async () => {
     const response = await fetch(getTodosUrl)
     const data = await response.json()
     return data
 }
-export const postTodosData = async(payload) => {
+
+export const postTodosData = async (payload) => {
+    console.log(payload)
     const response = await fetch(getTodosUrl, payload)
     const data = await response.json()
     return data
 }
 
-export const updateTodoData = async(id, todoData) => {
+export const updateTodoData = async (id, todoData) => {
     const response = await fetch(`${getTodosUrl}/${id}`, {
         method: "PUT",
         headers: {
@@ -23,7 +25,7 @@ export const updateTodoData = async(id, todoData) => {
     return data;
 }
 
-export const deleteTodoData = async(id) => {
+export const deleteTodoData = async (id) => {
     const response = await fetch(`${getTodosUrl}/${id}`, {
         method: "DELETE",
         headers: {
