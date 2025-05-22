@@ -8,7 +8,6 @@ const app = express();
 app.use(express.json());
 const PORT = 4000;
 const filePath = path.resolve("users.json")
-const secret_key = "karuna23"
 const readFileData = () => {
     try {
         const data = fs.readFileSync(filePath, "utf-8")
