@@ -69,3 +69,21 @@ req.on("end", ()=>{
 })
 
 
+
+
+1. Router
+2. MVC
+3. cors, dotenv,nodemon
+4. nodemailer
+
+/login -> req.body -> body obj, req.file -> 
+
+front end -> username, email, password, photo -> accept = "image/*"
+
+<!-- [1,2,[3,4,[5,6]]] -> i -> j -> k
+
+[1,2,3,4,5,6]
+
+-> usememo()
+
+->shallow copy, deep copy -->
