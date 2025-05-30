@@ -9,7 +9,6 @@ console.log(filePath)
 
 //Chatgpt image - 171291293812-419628272
 
-
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, filePath)
